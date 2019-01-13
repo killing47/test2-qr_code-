@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     format.html
     format.pdf do
       render pdf: "sample",   # PDF名
-             template: "partial/_qr_code.html.erb" # viewを対象にする
+      template: "partial/_qr_code.html.erb" # viewを対象にする
     end
 
   end
