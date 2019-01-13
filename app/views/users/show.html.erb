@@ -1,24 +1,4 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-<%= raw @qr.as_html %>
-<style type="text/css">
-table {
-  border-width: 0;
-  border-style: none;
-  border-color: #0000ff;
-  border-collapse: collapse;
-}
-
-td {
-  border-left: solid 10px #000;
-  padding: 0;
-  margin: 0;
-  width: 0px;
-  height: 10px;
-}
-
-td.black { border-color: #000; }
-td.white { border-color: #fff; }
-</style>
-
-
+<%= render "partial/qr_code" %>
+<%= link_to "PDF", "http://localhost:3000/users/#{@user.id}.pdf" %>

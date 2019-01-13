@@ -1,24 +1,17 @@
 class PostsController < ApplicationController
- 
-
-
-
 
   def index
   end
 
   def show
-    qr_code
-    respond_to do |format|
-    format.html 
-    format.pdf do
-      render pdf: "sample",   # PDF名
-             template: "posts/show.html.erb" # viewを対象にする
-    end
-  end
   end
 
   def edit
+  end
+  
+  def create
+    user = User.find(params[:id])
+    user = current_user.id. RQRCode::QRCode.new(url_for :controller => 'users', :action => 'show', :only_path => false, :size => 8, :level => :h ).as_svg.html_safe
   end
 
 
